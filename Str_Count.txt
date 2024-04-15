@@ -1,0 +1,15 @@
+$str="AAAACCCDDDDBD";
+$arr=[];
+for($i=0;$i<strlen($str);$i++){
+    $c=0;
+    for($j=0;$j<strlen($str);$j++){
+        if($str[$i]==$str[$j]){
+            $c++;
+        }
+    }
+    $arr["$str[$i]"]=$c;
+}
+
+echo "<pre>";
+print_r($arr);
+echo "</pre>";

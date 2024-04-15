@@ -1,0 +1,9 @@
+<?php
+$s=readline();
+if($s%5 == 0)
+echo $s/5;
+else {
+    $xx=(int)($s/5);
+    echo $xx+1;
+}
+?>

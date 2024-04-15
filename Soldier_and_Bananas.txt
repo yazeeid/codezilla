@@ -1,0 +1,19 @@
+<?php
+
+$k=readline(); 
+$w=readline(); 
+$n=readline(); 
+
+
+$sum=0;
+
+
+for($i=1;$i<=$w;$i++){
+    $sum+=$k*$i;
+}
+
+if($sum <= $n ){
+        echo "0";
+}else echo $sum-$n;
+
+?>

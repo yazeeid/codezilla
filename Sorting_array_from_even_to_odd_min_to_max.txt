@@ -1,0 +1,36 @@
+$arr=[1,2,5,6,9,6,4,6,2,3,8];
+
+
+echo "<pre>";
+print_r($arr);
+echo "</pre>";
+
+for($j=0; $j<(count($arr) / 2) ;$j++){
+    for($i=0;$i<count($arr)-1;$i++){
+        if(($arr[$i]%2==1) && ($arr[$i+1]%2==0)){
+            $x=$arr[$i];
+            $arr[$i]=$arr[$i+1];
+            $arr[$i+1]=$x;
+        }
+    }
+}
+echo "<pre>";
+print_r($arr);
+echo "</pre>";
+
+
+for($j=0; $j<(count($arr) / 2) ;$j++){
+$n=0;
+while ($arr[$n] % 2 ==0){
+    if($arr[$n]>$arr[$n+1] && $arr[$n+1]%2==0){
+        $x=$arr[$n];
+        $arr[$n]=$arr[$n+1];
+        $arr[$n+1]=$x;
+    }
+    $n++;
+}
+}
+
+echo "<pre>";
+print_r($arr);
+echo "</pre>";

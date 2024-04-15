@@ -1,0 +1,19 @@
+<?php
+
+
+$c=readline("enter num of words ");
+$ar=[];
+for($i=0;$i<$c;$i++){
+    $ar[$i]=readline("enter word num ".($i+1). " word ");
+}
+for($i=0;$i<count($ar);$i++){
+    $x=$ar[$i];
+    if(strlen($x) >=12){
+        echo $x[0];
+        echo strlen($x)-2;
+        echo $x[strlen($x)-1]; 
+    } else echo $ar[$i];
+    echo "\n";
+}
+
+?>

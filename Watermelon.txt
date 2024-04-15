@@ -1,0 +1,6 @@
+<?php
+$w=readline();
+if($w%2==0)
+echo "YES";
+else echo "NO";
+?>

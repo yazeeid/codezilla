@@ -4,7 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-
+use App\Models\User;
+use App\Models\Post;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -18,5 +19,17 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        $user=User::create([
+            'name' => 'admin',
+            'email' => 'admin@gmail.com',
+            'password' => '123456789',
+        ]);
+
+        Post::create([
+            'title' => 'test',
+            'description' => 'Hello World this is for test',
+            'user_id' => $user->id, 
+        ]);
     }
 }
